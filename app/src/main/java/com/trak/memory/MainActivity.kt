@@ -3,6 +3,7 @@ package com.trak.memory
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -16,6 +17,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.view.WindowCompat
 import com.google.accompanist.insets.ui.Scaffold
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.trak.memory.scene.game.GameScene
 import com.trak.memory.ui.theme.MemoryTheme
 
 class MainActivity : ComponentActivity() {
@@ -34,28 +36,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting()
+                    GameScene(
+                        modifier = Modifier.background(Color.Yellow)
+                    )
                 }
             }
         }
-    }
-}
-
-@Composable
-fun Greeting() {
-    Scaffold {
-        Box(
-            modifier = Modifier
-                .padding(it)
-                .fillMaxSize()
-        )
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    MemoryTheme {
-        Greeting()
     }
 }
