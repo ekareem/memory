@@ -53,7 +53,7 @@ fun MemoryTheme(
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
-    val view = LocalView.current
+//    val view = LocalView.current
 //    if (!view.isInEditMode) {
 //        SideEffect {
 //            (view.context as Activity).window.statusBarColor = colorScheme.primary.toArgb()
